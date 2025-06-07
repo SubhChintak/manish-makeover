@@ -26,9 +26,12 @@ const handleWhatsApp = () => {
         </p>  */}
 
         <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-600 to-white dark:from-neutral-600 dark:to-white text-4xl md:text-4xl lg:text-7xl py-2 md:py-10 relative z-20 font-playfair font-bold tracking-tight">
-        Welcome/স্বাগতম <br/> to <br /> <span className="text-gold"> Manish Makeover </span>
+        Welcome You <br/> To <br /> <span className="text-gold"> Manish Makeover </span>
       </h2>
-      <p className="max-w-xl mx-auto text-sm md:text-lg text-neutral-400 dark:text-neutral-400 text-center">
+      <h2 className="text-white text-2xl md:text-6xl font-playfair text-center">
+          Where Every Detail Matters!
+        </h2>
+      <p className="max-w-xl mt-3 mx-auto text-sm md:text-lg text-neutral-400 dark:text-neutral-400 text-center">
         More than just a salon — we craft personalized transformations that elevate your natural beauty.
 Step in for expert care, step out with unmatched confidence.
       </p>
