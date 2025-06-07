@@ -112,7 +112,7 @@
 
 @layer components {
   .product-card {
-    @apply relative flex flex-col overflow-hidden rounded-lg border bg-card text-light shadow-lg transition-all hover:shadow-xl;
+    @apply relative flex flex-col overflow-hidden rounded-xl border bg-card/90 backdrop-blur-sm text-light shadow-xl transition-all hover:shadow-2xl;
   }
 
   .product-image {
@@ -132,4 +132,51 @@
   .horizontal-scroll-item {
     @apply snap-start flex-shrink-0;
   }
+
+  /* Smooth animations */
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-xl hover:shadow-accent/20;
+  }
+
+  /* 3D Effects */
+  .card-3d {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+
+  .card-3d:hover {
+    transform: rotateX(5deg) rotateY(5deg) scale(1.02);
+  }
+
+  /* Backdrop blur effects */
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-md border border-accent/20;
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(212, 175, 55, 0.6); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
 }
